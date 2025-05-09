@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta title="Multi-faceted Process Exploration Side Project">
+    <script src="./scripts/d3.v7.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script language="javascript" src="https://npmcdn.com/regl/dist/regl.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./scripts/bootstrap.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="flex-container">
+
+        <!-- Title -->
+        <div class="jumbotron text-left border border-secondary m-1">
+            <h1 class="p-2">System Name</h1>
+        </div>
+
+
+        <!-- System controls -->
+        <div class="row justify-content-start control-row border border-secondary m-1">
+            <div class="col-sm-2 border-end border-secondary p-2">
+                <h4>Controls</h4>
+                <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-6"></span>
+                    <span class="placeholder col-8"></span>
+                </p>
+            </div>
+
+            <div class="col-sm-2 border-end border-secondary p-2">
+                <h4>Controls</h4>
+                <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-6"></span>
+                    <span class="placeholder col-8"></span>
+                </p>
+            </div>
+
+            <div class="col-sm-2 p-2">
+                <h4>Controls</h4>
+                <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-6"></span>
+                    <span class="placeholder col-8"></span>
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Visualizations -->
+        <div class="row justify-content-start vis-row border border-secondary m-1">
+            <!-- System controls 2 (left side bar) -->
+            <div class="col-sm-2 border-end border-secondary p-2">
+                <h4>Controls</h4>
+                <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-7"></span>
+                </p>
+            </div>
+
+
+            <!-- Scatterplot -->
+            <div class="col-sm-5 border-end border-secondary">
+                <div id="chart"></div>
+            </div>
+        </div>
+</body>
+
+</html>

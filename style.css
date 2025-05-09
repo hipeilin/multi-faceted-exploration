@@ -1,0 +1,34 @@
+/* *******************************************************************
+ * GENERAL
+ * ******************************************************************** */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    flex: 100%;
+}
+
+#chart {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+#chart canvas,
+#chart svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    line-height: 1.2;
+}

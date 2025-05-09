@@ -26,9 +26,9 @@ const DEFAULT_CONFIG = {
     colorScheme: d3.schemeTableau10,
     defaultHeight: 600,
     minZoom: 0.9,
-    maxZoom: 80,
-    hoverRadius: 12,
-    hoverCircleRadius: 6,
+    maxZoom: 120,
+    hoverRadius: 10,
+    hoverCircleRadius: 5,
     legendPosition: { x: 0, y: 0 },
     showAxes: false
 };
@@ -197,7 +197,7 @@ function drawScatterPlotWebGL(data, userConfig = {}) {
     gl.viewport(0, 0, canvas.node().width, canvas.node().height);
     gl.clearColor(1, 1, 1, 1);  // White background
     gl.enable(gl.BLEND);
-    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+    gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
 
     // ───────────────────────────────────────────
     // Create and compile shaders with improved error handling
@@ -412,7 +412,7 @@ function drawScatterPlotWebGL(data, userConfig = {}) {
     // Create hover indicator circle
     const hoverDot = hoverLayer.append('circle')
         .attr('r', config.hoverCircleRadius)
-        .attr('stroke', 'black')
+        .attr('stroke', 'darkgray')
         .attr('stroke-width', 1.5)
         .attr('fill', 'none')
         .style('pointer-events', 'none')
@@ -556,8 +556,6 @@ async function initVisualization() {
 
         // Create the visualization with configurable options
         const cleanup = drawScatterPlotWebGL(data, {
-            pointSize: 3.5,
-            pointOpacity: 0.75,
             showAxes: false,
             legendPosition: { x: 10, y: 10 }
         });
@@ -572,6 +570,29 @@ async function initVisualization() {
 
 // Initialize on document load
 document.addEventListener('DOMContentLoaded', initVisualization);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // async function loadFirstRow() {
 //     d3.csv('data/data_preprocessed.csv')
